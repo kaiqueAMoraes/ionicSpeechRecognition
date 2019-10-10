@@ -1,5 +1,7 @@
 {
   "name": "ionicProjectSenac",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

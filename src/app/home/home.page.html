@@ -1,14 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar [color]="isRecording ? 'danger' : 'primary'">
     <ion-title>
-      Ionic Blank
+      recording
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <button ion-button full (click)="getPermissions()">getPermissions</button>
+  <button ion-button full (click)="startListening()">start Listening</button>
+  <button ion-button full (click)="stopListening()">stop Listening</button>
+
+
+  <ion-card>
+    <ion-card-header>This is what I understood...</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let match of matches">
+          {{ match }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
